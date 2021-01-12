@@ -1,9 +1,8 @@
 const express = require('express');
+const posts = require('./posts');
 
 const router = express.Router();
 
-router.use('/posts', (req, res) => {
-  res.status(200).end();
-});
+router.use('/posts', posts);
 
 module.exports = router;

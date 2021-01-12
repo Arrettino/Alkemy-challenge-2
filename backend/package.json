@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "0.0.0",
-  "description": "Alkemy project backend",
+  "description": "Alkemy challenge backend",
   "scripts": {
     "start": "DEBUG=backend:server NODE_ENV=production node ./bin/www",
     "dev": "nodemon -L --config nodemon.json ./bin/www "

@@ -1,6 +1,12 @@
+const creationPostsService = require('../../../services/posts/creationPosts');
+
 async function creationPosts(req, res) {
-  const data = req.body;
-  const response = { status: 200, data };
+  const {
+    title, content, image, category, creationdDate,
+  } = req.body;
+  const response = await creationPostsService({
+    title, content, image, category, creationdDate,
+  });
   res.status(response.status).send(response.data);
 }
 

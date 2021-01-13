@@ -1,5 +1,5 @@
-const getPosts = require('./getPosts');
+const findAllPosts = require('./findAllPosts');
 
 module.exports = {
-  getPosts,
+  findAllPosts,
 };

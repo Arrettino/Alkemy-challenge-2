@@ -5,9 +5,6 @@ const router = express.Router();
 
 router.get('/', postsController.findAllPosts);
 
-router.get('/:id', (req, res) => {
-  const { id } = req.params;
-  res.status(200).send({ id });
-});
+router.get('/:id', postsController.findPosts);
 
 module.exports = router;

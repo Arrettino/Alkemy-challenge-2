@@ -4,8 +4,9 @@ async function updatePosts(req, res) {
   const {
     title, content, image, category, creationdDate,
   } = req.body;
+  const { id } = req.params;
   const response = await updatePostsService({
-    title, content, image, category, creationdDate,
+    id, title, content, image, category, creationdDate,
   });
   res.status(response.status).send(response.data);
 }

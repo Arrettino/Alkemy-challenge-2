@@ -1,4 +1,5 @@
 async function updatePosts({
+  id,
   title,
   content,
   image,
@@ -7,6 +8,7 @@ async function updatePosts({
 }) {
   const posts = {
     data: {
+      id,
       title,
       content,
       image,

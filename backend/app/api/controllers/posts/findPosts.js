@@ -1,6 +1,8 @@
+const findPostsService = require('../../../services/posts/findPosts');
+
 async function findPosts(req, res) {
   const { id } = req.params;
-  const response = { status: 200, data: { id } };
+  const response = await findPostsService(id);
   res.status(response.status).send(response.data);
 }
 

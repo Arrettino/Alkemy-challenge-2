@@ -1,9 +1,8 @@
 const express = require('express');
+const postsController = require('../../controllers/posts');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).end();
-});
+router.get('/', postsController.getPosts);
 
 module.exports = router;

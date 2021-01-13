@@ -4,7 +4,7 @@
 const http = require('http');
 const debug = require('debug')('backend:server');
 const config = require('config');
-const app = require('../app');
+const app = require('../app/app');
 
 const port = config.get('server.port');
 app.set('port', port);

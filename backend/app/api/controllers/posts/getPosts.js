@@ -1,7 +1,7 @@
 const servicesPosts = require('../../../services/posts');
 
-function getPosts(req, res) {
-  const response = servicesPosts.getPosts();
+async function getPosts(req, res) {
+  const response = await servicesPosts.getPosts();
   res.status(response.status).send(response.data);
 }
 

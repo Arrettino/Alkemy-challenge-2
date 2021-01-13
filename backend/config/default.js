@@ -13,4 +13,5 @@ module.exports = {
     host: process.env.HOST,
     dialect: process.env.DIALECT,
   },
+  categories: ['Comedia', 'Noticias', 'Cultura', 'Deporte'],
 };

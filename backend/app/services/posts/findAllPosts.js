@@ -1,7 +1,7 @@
 const postsModel = require('../../models/posts');
 
-function findAllPosts() {
-  const posts = postsModel.findAllPosts();
+async function findAllPosts() {
+  const posts = await postsModel.findAllPosts();
   return ({ status: 200, data: posts });
 }
 

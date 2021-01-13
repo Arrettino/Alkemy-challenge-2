@@ -7,6 +7,6 @@ router.get('/', postsController.findAllPosts);
 
 router.get('/:id', postsController.findPosts);
 
-router.post('/', postsController.creationPosts);
+router.post('/', postsController.createPosts);
 
 module.exports = router;

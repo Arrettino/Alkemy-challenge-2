@@ -1,6 +1,6 @@
 const PostsModel = require('./PostsModel');
 
-async function creationPosts({
+async function createPosts({
   title, content, image, category,
 }) {
   await PostsModel.create({
@@ -11,4 +11,4 @@ async function creationPosts({
   });
 }
 
-module.exports = creationPosts;
+module.exports = createPosts;

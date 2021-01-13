@@ -1,11 +1,11 @@
 const findAllPosts = require('./findAllPosts');
 const findPosts = require('./findPosts');
-const creationPosts = require('./creationPosts');
+const createPosts = require('./createPosts');
 const PostsModel = require('./PostsModel');
 
 module.exports = {
   findAllPosts,
   findPosts,
-  creationPosts,
+  createPosts,
   PostsModel,
 };

@@ -1,5 +1,8 @@
+const servicesPosts = require('../../../services/posts');
+
 function getPosts(req, res) {
-  res.status(200).end();
+  const response = servicesPosts.getPosts();
+  res.status(response.status).send(response.data);
 }
 
 module.exports = getPosts;

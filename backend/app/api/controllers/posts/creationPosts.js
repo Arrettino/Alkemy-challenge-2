@@ -7,7 +7,7 @@ async function creationPosts(req, res) {
   const response = await creationPostsService({
     title, content, image, category, creationdDate,
   });
-  res.status(response.status).send(response.data);
+  res.status(response.status).end();
 }
 
 module.exports = creationPosts;

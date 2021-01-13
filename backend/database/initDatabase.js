@@ -1,7 +1,7 @@
 const config = require('config');
 const sequelize = require('./index');
 const { findAllCategories, createCategories, CategoriesModel } = require('../app/models/categories');
-const PostsModel = require('../app/models/posts/PostsModel');
+const { PostsModel } = require('../app/models/posts');
 
 async function initDatabase() {
   try {

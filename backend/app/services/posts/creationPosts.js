@@ -1,3 +1,5 @@
+const postsModel = require('../../models/posts');
+
 async function creationPosts({
   title,
   content,
@@ -5,10 +7,14 @@ async function creationPosts({
   category,
   creationdDate,
 }) {
-  const posts = {
-    title, content, image, category, creationdDate,
-  };
-  return ({ status: 200, data: posts });
+  await postsModel.creationPosts({
+    title,
+    content,
+    image,
+    category,
+    creationdDate,
+  });
+  return ({ status: 200 });
 }
 
 module.exports = creationPosts;

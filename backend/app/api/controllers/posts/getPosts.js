@@ -1,7 +1,7 @@
-const servicesPosts = require('../../../services/posts');
+const findAllPosts = require('../../../services/posts/findAllPosts');
 
 async function getPosts(req, res) {
-  const response = await servicesPosts.findAllPosts();
+  const response = await findAllPosts();
   res.status(response.status).send(response.data);
 }
 

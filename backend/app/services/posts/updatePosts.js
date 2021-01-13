@@ -4,7 +4,7 @@ async function updatePosts({
   content,
   image,
   category,
-  creationdDate,
+  creationDate,
 }) {
   const posts = {
     data: {
@@ -13,7 +13,7 @@ async function updatePosts({
       content,
       image,
       category,
-      creationdDate,
+      creationDate,
     },
   };
   return ({ status: 200, data: posts });

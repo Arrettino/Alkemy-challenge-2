@@ -1,22 +1,13 @@
+const postsModel = require('../../models/posts');
+
 async function updatePosts({
-  id,
-  title,
-  content,
-  image,
-  category,
-  creationDate,
+  id, title, content, image, category,
 }) {
-  const posts = {
-    data: {
-      id,
-      title,
-      content,
-      image,
-      category,
-      creationDate,
-    },
-  };
-  return ({ status: 200, data: posts });
+  await postsModel.updatePosts({
+    id, title, content, image, category,
+  });
+
+  return ({ status: 200 });
 }
 
 module.exports = updatePosts;

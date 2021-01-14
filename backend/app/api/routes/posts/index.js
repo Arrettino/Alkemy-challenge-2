@@ -11,9 +11,6 @@ router.post('/', postsController.createPosts);
 
 router.patch('/:id', postsController.updatePosts);
 
-router.delete('/:id', (req, res) => {
-  const { id } = req.params;
-  res.status(200).send({ id });
-});
+router.delete('/:id', postsController.deletePosts);
 
 module.exports = router;

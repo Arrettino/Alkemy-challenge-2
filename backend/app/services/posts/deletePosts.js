@@ -1,6 +1,8 @@
+const postsModel = require('../../models/posts');
+
 async function deletePosts({ id }) {
-  const post = { id };
-  return ({ status: 200, data: post });
+  await postsModel.deletePosts({ id });
+  return ({ status: 200 });
 }
 
 module.exports = deletePosts;

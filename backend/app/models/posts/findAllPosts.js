@@ -12,7 +12,10 @@ async function findAllPosts() {
         as: 'categories',
       },
     ],
-    attributes: ['id', 'title', 'image'],
+    attributes: ['id', 'title', 'image', 'createdAt'],
+    order: [
+      ['createdAt', 'DESC'],
+    ],
   });
   return (response);
 }

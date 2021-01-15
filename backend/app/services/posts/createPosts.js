@@ -5,14 +5,14 @@ async function createPosts({
   content,
   image,
   categoriesId,
-  creationdDate,
+  createdAt,
 }) {
   await postsModel.createPosts({
     title,
     content,
     image,
     categoriesId,
-    creationdDate,
+    createdAt,
   });
   return ({ status: 200, message: { status: 'OK' } });
 }

@@ -8,7 +8,7 @@ async function updatePosts(req, res) {
   const response = await updatePostsService({
     id, title, content, image, categoriesId, creationDate,
   });
-  res.status(response.status).end();
+  res.status(response.status).send(response.message);
 }
 
 module.exports = updatePosts;

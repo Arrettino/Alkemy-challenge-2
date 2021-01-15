@@ -7,7 +7,7 @@ async function updatePosts({
     id, title, content, image, categoriesId,
   });
 
-  return ({ status: 200 });
+  return ({ status: 200, message: { status: 'OK' } });
 }
 
 module.exports = updatePosts;

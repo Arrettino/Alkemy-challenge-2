@@ -1,13 +1,13 @@
 const PostsModel = require('./PostsModel');
 
 async function createPosts({
-  title, content, image, category,
+  title, content, image, categoriesId,
 }) {
   await PostsModel.create({
     title,
     content,
     image,
-    categoriesId: category,
+    categoriesId,
   });
 }
 

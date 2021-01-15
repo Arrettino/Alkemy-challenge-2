@@ -8,7 +8,7 @@ async function findAllPosts() {
     include: [
       {
         model: CategoriesModel,
-        attributes: ['id', 'name'],
+        attributes: ['name'],
         as: 'categories',
       },
     ],

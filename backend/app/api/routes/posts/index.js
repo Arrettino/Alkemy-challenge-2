@@ -1,16 +1,17 @@
 const express = require('express');
 const postsController = require('../../controllers/posts');
+const { asyncHandler } = require('../../middlewares');
 
 const router = express.Router();
 
-router.get('/', postsController.findAllPosts);
+router.get('/', asyncHandler(postsController.findAllPosts));
 
-router.get('/:id', postsController.findPosts);
+router.get('/:id', asyncHandler(postsController.findPosts));
 
-router.post('/', postsController.createPosts);
+router.post('/', asyncHandler(postsController.createPosts));
 
-router.patch('/:id', postsController.updatePosts);
+router.patch('/:id', asyncHandler(postsController.updatePosts));
 
-router.delete('/:id', postsController.deletePosts);
+router.delete('/:id', asyncHandler(postsController.deletePosts));
 
 module.exports = router;

@@ -1,10 +1,10 @@
 const postsModel = require('../../models/posts');
 
 async function updatePosts({
-  id, title, content, image, category,
+  id, title, content, image, categoriesId,
 }) {
   await postsModel.updatePosts({
-    id, title, content, image, category,
+    id, title, content, image, categoriesId,
   });
 
   return ({ status: 200 });

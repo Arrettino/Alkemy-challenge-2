@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 const config = require('config');
 const sequelize = require('./index');
-const { createCategories } = require('../app/models/categories');
+const { createCategories, CategoriesModel } = require('../app/models/categories');
+const { PostsModel } = require('../app/models/posts');
 
 async function resetDatabase() {
   try {

@@ -1,11 +1,11 @@
+const debug = require('debug')('reset:database');
 const resetDatabase = require('../database/resetDatabase');
 
 async function resetDatabaseScript() {
   try {
     await resetDatabase();
-    console.log('Finish Reset');
   } catch (err) {
-    console.log(err);
+    debug(err);
   }
 }
 resetDatabaseScript();

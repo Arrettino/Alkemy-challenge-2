@@ -5,7 +5,7 @@
   "scripts": {
     "start": "DEBUG=backend:server NODE_ENV=production node ./bin/www",
     "dev": "nodemon -L --config nodemon.json ./bin/www ",
-    "reset:database": "node ./scripts/resetDatabaseScript"
+    "reset:database": "DEBUG=reset:database node ./scripts/resetDatabaseScript"
   },
   "dependencies": {
     "config": "^3.3.3",

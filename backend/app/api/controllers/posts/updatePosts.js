@@ -16,7 +16,7 @@ async function updatePosts(req, res, next) {
     return (next(postsNotFoundError({ id })));
   }
 
-  return (next(categoriesNotFoundError()));
+  return (next(categoriesNotFoundError({ categoriesId })));
 }
 
 module.exports = updatePosts;

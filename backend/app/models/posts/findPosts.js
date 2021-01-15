@@ -6,9 +6,11 @@ async function findPosts(id) {
     include: [
       {
         model: CategoriesModel,
+        attributes: ['name'],
         as: 'categories',
       },
     ],
+    attributes: ['id', 'title', 'content', 'image', 'createdAt'],
   });
   return (response);
 }

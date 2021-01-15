@@ -1,7 +1,9 @@
 const PostsModel = require('./PostsModel');
 
 async function deletePosts({ id }) {
-  await PostsModel.destroy({ where: { id } });
+  const response = await PostsModel.destroy({ where: { id } });
+  console.log(response);
+  return (response);
 }
 
 module.exports = deletePosts;

@@ -1,9 +1,14 @@
 const deletePostsService = require('../../../services/posts/deletePosts');
+const { postsNotFoundError } = require('../../errors');
 
-async function createPosts(req, res) {
+async function createPosts(req, res, next) {
   const { id } = req.params;
   const response = await deletePostsService({ id });
-  res.status(response.status).end();
+  if (response.database) {
+    res.status(response.status).end();
+  } else {
+    next(postsNotFoundError({ id }));
+  }
 }
 
 module.exports = createPosts;

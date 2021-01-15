@@ -1,8 +1,8 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const routes = require('./api/routes/index');
-const initDatabase = require('../database/initDatabase');
+const routes = require('./routes/index');
+const initDatabase = require('../../database/initDatabase');
 
 const app = express();
 

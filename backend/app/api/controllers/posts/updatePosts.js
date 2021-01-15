@@ -1,5 +1,5 @@
 const updatePostsService = require('../../../services/posts/updatePosts');
-const { postsNotFoundError } = require('../../errors');
+const { postsNotFoundError, categoriesNotFoundError } = require('../../errors');
 
 async function updatePosts(req, res, next) {
   const {
@@ -9,11 +9,14 @@ async function updatePosts(req, res, next) {
   const response = await updatePostsService({
     id, title, content, image, categoriesId, creationDate,
   });
-  if (response.database) {
-    res.status(response.status).send(response.message);
-  } else {
-    next(postsNotFoundError({ id }));
+  if (response.status === 200) {
+    return (res.status(response.status).send(response.message));
   }
+  if (response.message.name === 'posts') {
+    return (next(postsNotFoundError({ id })));
+  }
+
+  return (next(categoriesNotFoundError()));
 }
 
 module.exports = updatePosts;
